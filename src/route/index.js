@@ -19,28 +19,35 @@ import ExeFinance from "./ExeFinance";
 import ExeAudit from "./ExeAudit";
 import NavB from "modules/NavB";
 import Footer from "modules/Footer";
+import RenderPage from "modules/RenderPage";
+
+import MainTopicText from "modules/MainTopicText";
+import { FormCustom, MapBox, ButtonTab, Butt } from "./ContactPage/styled";
+import { Form, Container, Row, Col } from "react-bootstrap";
+import ButtonPush from "modules/ButtonPush";
+import map from "modules/images/map.jpg";
 
 const Routes = () => {
   return (
     <Router>
       <NavB />
-      <Route exact path="/" component={HomePage} />
-      <Route path="/activity" component={ActivityPage} />
-      <Route path="/news" component={InformationPage} />
-      <Route path="/media" component={MediaPage} />
-      <Route path="/business" component={ThaiChineseBusiness} />
-      <Route path="/confident" component={ThaiChineseConfident} />
-      <Route path="/ThaiInvest" component={ThaiInvest} />
-      <Route path="/ChineseInvest" component={ChineseInvest} />
-      <Route path="/boardMember" component={BoardMember} />
-      <Route path="/honorMember" component={HonorMember} />
-      <Route path="/member" component={MemberDirectory} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/contact" component={ContactPage} />
-      <Route path="/secretaryGeneral" component={SecretaryGeneral} />
-      <Route path="/chiefExecutive" component={ExeFinance} />
-      <Route path="/chiefExecutiveDeputy" component={ChiefFinance} />
-      <Route path="/chiefExecutiveAudit" component={ExeAudit} />
+      <Route exact path="/tcc" component={HomePage} />
+      <Route path="/tcc/activity" component={ActivityPage} />
+      <Route path="/tcc/news" component={InformationPage} />
+      <Route path="/tcc/media" component={MediaPage} />
+      <Route path="/tcc/business" component={ThaiChineseBusiness} />
+      <Route path="/tcc/confident" component={ThaiChineseConfident} />
+      <Route path="/tcc/ThaiInvest" component={ThaiInvest} />
+      <Route path="/tcc/ChineseInvest" component={ChineseInvest} />
+      <Route path="/tcc/boardMember" component={BoardMember} />
+      <Route path="/tcc/honorMember" component={HonorMember} />
+      <Route path="/tcc/member" component={MemberDirectory} />
+      <Route path="/tcc/about" component={AboutPage} />
+      <Route path="/tcc/contact" component={ContactPage} />
+      <Route path="/tcc/secretaryGeneral" component={SecretaryGeneral} />
+      <Route path="/tcc/chiefExecutive" component={ExeFinance} />
+      <Route path="/tcc/chiefExecutiveDeputy" component={ChiefFinance} />
+      <Route path="/tcc/chiefExecutiveAudit" component={ExeAudit} />
       <Footer />
     </Router>
   );
