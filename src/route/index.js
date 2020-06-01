@@ -19,13 +19,6 @@ import ExeFinance from "./ExeFinance";
 import ExeAudit from "./ExeAudit";
 import NavB from "modules/NavB";
 import Footer from "modules/Footer";
-import RenderPage from "modules/RenderPage";
-
-import MainTopicText from "modules/MainTopicText";
-import { FormCustom, MapBox, ButtonTab, Butt } from "./ContactPage/styled";
-import { Form, Container, Row, Col } from "react-bootstrap";
-import ButtonPush from "modules/ButtonPush";
-import map from "modules/images/map.jpg";
 
 const Routes = () => {
   return (

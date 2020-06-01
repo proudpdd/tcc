@@ -44,35 +44,35 @@ import man1 from "modules/images/man1.jpg";
 const HomePage = () => {
   const history = useHistory();
   const OnClickActivity = () => {
-    history.push({ pathname: "/activity" });
+    history.push({ pathname: "/tcc/activity" });
   };
 
   const OnClickInfo = () => {
-    history.push({ pathname: "/news" });
+    history.push({ pathname: "/tcc/news" });
   };
 
   const OnClickMedia = () => {
-    history.push({ pathname: "/media" });
+    history.push({ pathname: "/tcc/media" });
   };
 
   const OnClickAbout = () => {
-    history.push({ pathname: "/about" });
+    history.push({ pathname: "/tcc/about" });
   };
 
   const OnClickMember = () => {
-    history.push({ pathname: "/boardMember" });
+    history.push({ pathname: "/tcc/boardMember" });
   };
 
   const OnClickConfident = () => {
-    history.push({ pathname: "/confident" });
+    history.push({ pathname: "/tcc/confident" });
   };
 
   const OnClickThaiInvest = () => {
-    history.push({ pathname: "/ThaiInvest" });
+    history.push({ pathname: "/tcc/ThaiInvest" });
   };
 
   const OnClickChineseInvest = () => {
-    history.push({ pathname: "/ChineseInvest" });
+    history.push({ pathname: "/tcc/ChineseInvest" });
   };
 
   return (

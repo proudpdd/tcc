@@ -57,6 +57,7 @@ export const ButtonEconomic = styled.div`
   justify-content: center;
   font-size: 18px;
   margin-bottom: 25px;
+  cursor: pointer;
 `;
 
 export const PicBoxEconomic = styled.img`

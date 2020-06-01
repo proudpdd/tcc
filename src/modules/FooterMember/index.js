@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 const FooterMember = () => {
   const history = useHistory();
   const OnClickExeAudit = () => {
-    history.push({ pathname: "/chiefExecutiveAudit" });
+    history.push({ pathname: "/tcc/chiefExecutiveAudit" });
   };
 
   return (
