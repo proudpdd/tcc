@@ -8,7 +8,6 @@ export const FormCustom = styled(Form)`
     color: #000;
     font-family: promptLight;
     font-size: 21px;
-    width: 50%;
   }
 `;
 
