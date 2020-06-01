@@ -24,23 +24,23 @@ const Routes = () => {
   return (
     <Router>
       <NavB />
-      <Route exact path="/tcc" component={HomePage} />
-      <Route path="/tcc/activity" component={ActivityPage} />
-      <Route path="/tcc/news" component={InformationPage} />
-      <Route path="/tcc/media" component={MediaPage} />
-      <Route path="/tcc/business" component={ThaiChineseBusiness} />
-      <Route path="/tcc/confident" component={ThaiChineseConfident} />
-      <Route path="/tcc/ThaiInvest" component={ThaiInvest} />
-      <Route path="/tcc/ChineseInvest" component={ChineseInvest} />
-      <Route path="/tcc/boardMember" component={BoardMember} />
-      <Route path="/tcc/honorMember" component={HonorMember} />
-      <Route path="/tcc/member" component={MemberDirectory} />
-      <Route path="/tcc/about" component={AboutPage} />
-      <Route path="/tcc/contact" component={ContactPage} />
-      <Route path="/tcc/secretaryGeneral" component={SecretaryGeneral} />
-      <Route path="/tcc/chiefExecutive" component={ExeFinance} />
-      <Route path="/tcc/chiefExecutiveDeputy" component={ChiefFinance} />
-      <Route path="/tcc/chiefExecutiveAudit" component={ExeAudit} />
+      <Route exact path="/" component={HomePage} />
+      <Route path="/activity" component={ActivityPage} />
+      <Route path="/news" component={InformationPage} />
+      <Route path="/media" component={MediaPage} />
+      <Route path="/business" component={ThaiChineseBusiness} />
+      <Route path="/confident" component={ThaiChineseConfident} />
+      <Route path="/ThaiInvest" component={ThaiInvest} />
+      <Route path="/ChineseInvest" component={ChineseInvest} />
+      <Route path="/boardMember" component={BoardMember} />
+      <Route path="/honorMember" component={HonorMember} />
+      <Route path="/member" component={MemberDirectory} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/secretaryGeneral" component={SecretaryGeneral} />
+      <Route path="/chiefExecutive" component={ExeFinance} />
+      <Route path="/chiefExecutiveDeputy" component={ChiefFinance} />
+      <Route path="/chiefExecutiveAudit" component={ExeAudit} />
       <Footer />
     </Router>
   );
