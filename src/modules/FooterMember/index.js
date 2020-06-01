@@ -13,8 +13,8 @@ const FooterMember = () => {
 
   return (
     <Box>
-      <div style={{cursor: 'pointor'}} onClick={OnClickExeAudit}>Senior Executive Directors</div>
-      <div style={{cursor: 'pointor'}}>Directors</div>
+      <div style={{cursor: 'pointer'}} onClick={OnClickExeAudit}>Senior Executive Directors</div>
+      <div style={{cursor: 'pointer'}}>Directors</div>
       <TextBox>
         <TopicText>ค้นหาตำแหน่ง</TopicText>
       </TextBox>

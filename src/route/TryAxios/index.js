@@ -32,21 +32,21 @@ export default class Tryaxios extends React.Component {
   render() {
     return (
       <div>
-        {/* {this.state.persons.map((person) => (
-          <div>
-            {person.profileposition_en == "VICE PRESIDENT" ? (
-              <div>{person.name_th}</div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-        ))} */}
+        {this.state.persons
+          .filter((person) => person.profileposition_en === "Vice President")
+          .map((fil) => (
+            <div>{fil.business_th}</div>
+          ))}
       </div>
-
-
     );
   }
 }
+
+// {people.filter(person => person.age < 60).map(filteredPerson => (
+//   <li>
+//     {filteredPerson.name}
+//   </li>
+// ))}
 
 // https://jsonplaceholder.typicode.com/users
 // http://backoffice.thaicc.org/ApiArea/Banner

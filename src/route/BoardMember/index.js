@@ -41,7 +41,7 @@ class BoardMember extends React.Component {
             <div>THE 27TH</div>
             <div>BOARD OF DIRECTORS</div>
             <FormCustom>
-              <Form.Control type="text">
+              <Form.Control>
                 {/* <img src={search} alt="search" /> */}
               </Form.Control>
             </FormCustom>
@@ -49,7 +49,7 @@ class BoardMember extends React.Component {
 
           {this.state.broadMembers
             .filter(
-              (broadMember) => broadMember.profileposition_en === "PRESIDENT"
+              (broadMember) => broadMember.profileposition_en === "President"
             )
             .map((President) => (
               <div>
@@ -76,7 +76,7 @@ class BoardMember extends React.Component {
             {this.state.broadMembers
               .filter(
                 (broadMember) =>
-                  broadMember.profileposition_en === "VICE PRESIDENT"
+                  broadMember.profileposition_en === "Vice President"
               )
               .map((vicePresident) => (
                 <Col xs={12}>
@@ -118,7 +118,7 @@ class BoardMember extends React.Component {
             {this.state.broadMembers
               .filter(
                 (broadMember) =>
-                  broadMember.profileposition_en === "DEPUTY SECRETARY GENERAL"
+                  broadMember.profileposition_en === "Secretary General"
               )
               .map((SecretaryGeneral) => (
                 <Col xs={12}>
