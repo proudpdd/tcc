@@ -3,11 +3,9 @@ import { Navbar, Nav } from "react-bootstrap";
 
 export const NavbarCustom = styled(Navbar)`
   background-color: #fdd600;
-
   .dropdown-toggle::after {
     display: none;
   }
-
   .nav-link {
     color: black !important;
   }
@@ -21,5 +19,15 @@ export const NavCustom = styled(Nav)`
   .mr-auto {
     margin-right: 0;
   }
+  .nav-item {
+    color: red !important;
+  }
 `;
 
+export const NavLinkCustom = styled(Nav)`
+  .nav-item {
+    &:active {
+      color: red !important;
+    }
+  }
+`;

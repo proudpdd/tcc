@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PicBox = styled.img`
   width: 100%;
-  margin: 5.56vw 0 5.56vw 0;
+  margin: 20px 0;
 `;
 
 export const ShareBox = styled.div`

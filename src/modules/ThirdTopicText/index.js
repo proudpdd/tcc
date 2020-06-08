@@ -1,12 +1,8 @@
-import React from 'react'
-import {TopicBox, TextBox} from './styled'
+import React from "react";
+import { TextBox } from "./styled";
 
-const ThirdTopicText = ({name}) => {
-    return (
-        <TopicBox>
-            <TextBox>{name}</TextBox>
-        </TopicBox>
-    )
-}
+const ThirdTopicText = ({ name }) => {
+  return <TextBox>{name}</TextBox>;
+};
 
-export default ThirdTopicText
+export default ThirdTopicText;

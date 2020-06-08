@@ -44,7 +44,7 @@ const DepartmentTab = () => {
   return (
     <div>
       <div onClick={() => setModalShow(true)}>
-        <ButtonMember name="Department of" />
+        <ButtonMember name="กรุณาเลือกฝ่าย" />
       </div>
       <MyVerticallyCenteredModal
         show={modalShow}

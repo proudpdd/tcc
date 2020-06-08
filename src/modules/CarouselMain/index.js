@@ -1,36 +1,25 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import test from "modules/images/test.jpg";
-import test1 from 'modules/images/test1.jpg'
-import test2 from 'modules/images/test2.jpg'
-import { CarouselCustom, Line } from "./styled";
+import test1 from "modules/images/test1.jpg";
+import test2 from "modules/images/test2.jpg";
+import { CarouselCustom, Line, PicBox } from "./styled";
 
-const CarouselMain = () => {
+const CarouselMain = ({ Page }) => {
   return (
     <div>
       <CarouselCustom>
         <Carousel.Item>
-          <img className="d-block w-100" src={test} alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-          </Carousel.Caption>
+          <PicBox src={test} alt="First slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={test1} alt="Third slide" />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-          </Carousel.Caption>
+          <PicBox src={test1} alt="Third slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={test2} alt="Third slide" />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-          </Carousel.Caption>
+          <PicBox src={test2} alt="Third slide" />
         </Carousel.Item>
       </CarouselCustom>
-      <Line />
+      {Page ? null : <Line />}
     </div>
   );
 };

@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 const FooterMember = () => {
   const history = useHistory();
   const OnClickExeAudit = () => {
-    history.push({ pathname: "/tcc/chiefExecutiveAudit" });
+    history.push({ pathname: "/chiefExecutiveAudit" });
   };
 
   return (
@@ -16,11 +16,11 @@ const FooterMember = () => {
       <div style={{cursor: 'pointer'}} onClick={OnClickExeAudit}>Senior Executive Directors</div>
       <div style={{cursor: 'pointer'}}>Directors</div>
       <TextBox>
-        <TopicText>ค้นหาตำแหน่ง</TopicText>
+        <TopicText>ค้นหาสมาชิก</TopicText>
       </TextBox>
       <PositionTab />
       <DepartmentTab />
-      <ButtonPush name="GO" />
+      <ButtonPush name="ค้นหา" />
     </Box>
   );
 };

@@ -112,13 +112,13 @@ class BoardMember extends React.Component {
         <Container>
           <SecondTopicText
             state={LANGUAGE_STATE_S.Eng}
-            name="SECRETARY GENERAL & DEPUTY SECRETARY GENERAL"
+            name="SECRETARY GENERAL &"
+            SecondText="DEPUTY SECRETARY GENERAL"
           />
           <Row md={4}>
             {this.state.broadMembers
-              .filter(
-                (broadMember) =>
-                  broadMember.profileposition_en === "Secretary General"
+              .filter((broadMember) =>
+                broadMember.profileposition_en.includes("Secretary General")
               )
               .map((SecretaryGeneral) => (
                 <Col xs={12}>

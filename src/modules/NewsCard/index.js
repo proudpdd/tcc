@@ -9,10 +9,17 @@ import {
   UnderLineBox,
 } from "./styled";
 import test from "modules/images/test.jpg";
+import { useHistory } from "react-router-dom";
+
 
 const NewsCard = ({ nameTopic }) => {
+  const history = useHistory();
+  const OnClickDetailNews = (id) => {
+    history.push({pathname: "/DetailNews",id:id});
+  }
+
   return (
-    <Card>
+    <Card onClick={OnClickDetailNews(2)}>
       <PicBox src={test} />
       <Topic>
         <div>{nameTopic}</div>

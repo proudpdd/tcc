@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const PicBox = styled.img`
-  width: 100%;
-  margin-bottom: 15px;
+export const PicBox = styled.div`
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 56.25%;
 `;
 
 export const Card = styled.div`

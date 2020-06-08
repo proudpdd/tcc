@@ -19,12 +19,15 @@ import {
 import DetailText from "modules/DetailText";
 import NewsCard from "modules/NewsCard";
 import { LANGUAGE_STATE_M } from "modules/MainTopicText";
+import CarouselMain from "modules/CarouselMain";
 
-const RenderBusinessPage = ({ namePage }) => {
+const RenderBusinessPage = ({ namePage, DetailNews }) => {
   return (
-    <div style={{marginBottom: '50px'}}>
+    <div style={{ marginBottom: "50px" }}>
       <Container>
-        <MainTopicText state={LANGUAGE_STATE_M.Thai} name="เศรษฐกิจธุรกิจ" />
+        {DetailNews ? null : (
+          <MainTopicText state={LANGUAGE_STATE_M.Thai} name="เศรษฐกิจธุรกิจ" />
+        )}
         <Row>
           <Col lg>
             <ThirdTopicText name={namePage} />
@@ -64,6 +67,9 @@ const RenderBusinessPage = ({ namePage }) => {
             </Detail>
           </Col>
         </Row>
+      </Container>
+      <Container>
+        <CarouselMain Page="true" />
       </Container>
       <Container>
         <DetailText state={LANGUAGE_STATE_D.Thai} name="ข่าวที่น่าสนใจ" />

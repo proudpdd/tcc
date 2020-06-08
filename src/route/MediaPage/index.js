@@ -1,10 +1,10 @@
 import React from "react";
+import ReactPlayer from "react-player";
 import CarouselMain from "modules/CarouselMain";
 import MainTopicText from "modules/MainTopicText";
 import PaginationTab from "modules/PaginationTab";
 import { Container, Row, Col } from "react-bootstrap";
 import NewsCard from "modules/NewsCard";
-import test from "modules/images/test.jpg";
 import facebook from "modules/images/facebook.svg";
 import twitter from "modules/images/twitter.svg";
 import line from "modules/images/line.svg";
@@ -23,7 +23,7 @@ import {
   SocialPic,
 } from "./styled";
 
-const MediaPage = ({ nameTopicM }) => {
+const MediaPage = ({ nameTopicM, url }) => {
   return (
     <div>
       <CarouselMain />
@@ -31,7 +31,15 @@ const MediaPage = ({ nameTopicM }) => {
         <MainTopicText state={LANGUAGE_STATE_M.Eng} name="MEDIA" />
         <Row>
           <Col>
-            <PicBox src={test} alt="video" />
+            <PicBox>
+              <ReactPlayer
+                style={{ position: "absolute", top: "0", left: "0" }}
+                width="100%"
+                height="100%"
+                controls
+                url="https://www.youtube.com/watch?v=i_O8RSYPaQM"
+              />
+            </PicBox>
             <Card>
               <Topic>
                 <div>sofuf9uvdfvu</div>

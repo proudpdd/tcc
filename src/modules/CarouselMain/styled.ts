@@ -25,3 +25,11 @@ export const Line = styled.div`
     width: 100%;
     background-color: #fdd600;
 `
+
+export const PicBox = styled.img`
+    width: 100%;
+    height: 35vw;
+    @media (max-width: 500px) {
+        height: 50vw;
+    }
+`

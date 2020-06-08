@@ -1,6 +1,7 @@
 import React from "react";
 import SecondTopicText from "modules/SecondTopicText";
 import MainTopicText from "modules/MainTopicText";
+import ReactPlayer from "react-player";
 import NewsCardHomePage from "modules/NewsCardHomePage";
 import { LANGUAGE_STATE_S } from "modules/SecondTopicText";
 import { LANGUAGE_STATE_M } from "modules/MainTopicText";
@@ -24,6 +25,12 @@ import {
   ButtonTry,
   NewsText,
   NewsTextContainer,
+  HomeButton,
+  TextButton,
+  Picdiv,
+  Buttondiv,
+  VideoPic,
+  PicImg,
 } from "./styled";
 import {
   Topic,
@@ -34,12 +41,13 @@ import {
 } from "modules/NewsCard/styled";
 import logo from "modules/TopicNav/images/logo.svg";
 import ButtonPush from "modules/ButtonPush";
-import HomeButton from "modules/HomeButton";
 import test from "modules/images/test.jpg";
 import Mediaquery from "react-responsive";
 import NewsCard from "modules/NewsCard";
 import CarouselMain from "modules/CarouselMain";
-import man1 from "modules/images/man1.jpg";
+import pesident from "modules/images/pesident.svg";
+import BlueButton from "modules/images/BlueButton.svg";
+import yellowButton from "modules/images/yellowButton.svg";
 
 const HomePage = () => {
   const history = useHistory();
@@ -103,40 +111,42 @@ const HomePage = () => {
               </NewsText>
             </NewsTextContainer>
           </Col>
-          <Col md={{ span: 4 }}>
-            <NewsTextContainer>
-              <PicBoxMedia
-                style={{ height: "212.5px" }}
-                src={test}
-                alt="newsMedia"
-              />
-              <NewsText>
-                <Topic style={{ marginTop: "0" }}>
-                  <div style={{ color: "#fff" }}>skdfndfvjn</div>
-                  <UnderLineBox>
-                    <RedLine style={{ backgroundColor: "#fdd600" }} />
-                    <BlackLine style={{ backgroundColor: "#fff" }} />
-                  </UnderLineBox>
-                </Topic>
-              </NewsText>
-            </NewsTextContainer>
-            <NewsTextContainer>
-              <PicBoxMedia
-                style={{ height: "212.5px" }}
-                src={test}
-                alt="newsMedia"
-              />
-              <NewsText>
-                <Topic style={{ marginTop: "0" }}>
-                  <div style={{ color: "#fff" }}>skdfndfvjn</div>
-                  <UnderLineBox>
-                    <RedLine style={{ backgroundColor: "#fdd600" }} />
-                    <BlackLine style={{ backgroundColor: "#fff" }} />
-                  </UnderLineBox>
-                </Topic>
-              </NewsText>
-            </NewsTextContainer>
-          </Col>
+          <Mediaquery minWidth={768}>
+            <Col md={{ span: 4 }}>
+              <NewsTextContainer>
+                <PicBoxMedia
+                  style={{ height: "212.5px" }}
+                  src={test}
+                  alt="newsMedia"
+                />
+                <NewsText>
+                  <Topic style={{ marginTop: "0" }}>
+                    <div style={{ color: "#fff" }}>skdfndfvjn</div>
+                    <UnderLineBox>
+                      <RedLine style={{ backgroundColor: "#fdd600" }} />
+                      <BlackLine style={{ backgroundColor: "#fff" }} />
+                    </UnderLineBox>
+                  </Topic>
+                </NewsText>
+              </NewsTextContainer>
+              <NewsTextContainer>
+                <PicBoxMedia
+                  style={{ height: "212.5px" }}
+                  src={test}
+                  alt="newsMedia"
+                />
+                <NewsText>
+                  <Topic style={{ marginTop: "0" }}>
+                    <div style={{ color: "#fff" }}>skdfndfvjn</div>
+                    <UnderLineBox>
+                      <RedLine style={{ backgroundColor: "#fdd600" }} />
+                      <BlackLine style={{ backgroundColor: "#fff" }} />
+                    </UnderLineBox>
+                  </Topic>
+                </NewsText>
+              </NewsTextContainer>
+            </Col>
+          </Mediaquery>
         </Row>
         <Row md={4}>
           <Col xs={12}>
@@ -167,7 +177,7 @@ const HomePage = () => {
                   <UnderLineBox>
                     <RedLine />
                     <BlackLine />
-                  </UnderLineBox> 
+                  </UnderLineBox>
                 </Topic>
                 <BodyBox>
                   Stores that fail to enforce disease control measures warned
@@ -295,42 +305,103 @@ const HomePage = () => {
       <div>
         <ContainerCustom>
           <MainTopicText state={LANGUAGE_STATE_M.Eng} name="MEDIA" />
-          <Row>
-            <Col md={{ span: 8 }} style={{ marginBottom: "15px" }}>
-              <PicBoxEconomic
-                style={{ height: "450px" }}
-                src={test}
-                alt="newsMedia"
-              />
-              <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
-                Sed sit amet ligula eget eros venenatis sodales non vitae lorem.
-                In laoreet nunc in vestibulum posuere.
-              </DetailAbout>
-            </Col>
-            <Col md={{ span: 4 }}>
-              <Col style={{ marginBottom: "10px" }}>
-                <PicBoxMedia src={test} alt="newsMedia" />
-                <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+
+          <Mediaquery minWidth={992}>
+            <Row>
+              <Col md={{ span: 9 }} style={{ marginBottom: "15px" }}>
+                <VideoPic>
+                  <ReactPlayer
+                    style={{ position: "absolute", top: "0", left: "0" }}
+                    light
+                    playing
+                    controls
+                    url="https://www.youtube.com/watch?v=i_O8RSYPaQM"
+                    width="100%"
+                    height="100%"
+                  />
+                </VideoPic>
+                <DetailAbout style={{ marginTop: "10", color: "#0a2980" }}>
                   Sed sit amet ligula eget eros venenatis sodales non vitae
-                  lorem.
+                  lorem. In laoreet nunc in vestibulum posuere. sidjcodsif
+                  oidfjvoos osidcjoi iosjdvoi dj osdivjofdi
                 </DetailAbout>
               </Col>
-              <Col style={{ marginBottom: "10px" }}>
-                <PicBoxMedia src={test} alt="newsMedia" />
-                <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+              <Col md={{ span: 3 }} onClick={OnClickMedia}>
+                <Col style={{ marginBottom: "10px" }}>
+                  <PicImg src={test} alt="videoPic" />
+                  <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+                    Sed sit amet ligula eget eros venenatis
+                  </DetailAbout>
+                </Col>
+                <Col style={{ marginBottom: "10px" }}>
+                  <PicImg src={test} alt="videoPic" />
+                  <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+                    Sed sit amet ligula eget eros venenatis
+                  </DetailAbout>
+                </Col>
+                <Col style={{ marginBottom: "10px" }}>
+                  <PicImg src={test} alt="videoPic" />
+                  <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+                    Sed sit amet ligula eget eros venenatis
+                  </DetailAbout>
+                </Col>
+              </Col>
+            </Row>
+          </Mediaquery>
+
+          <Mediaquery maxWidth={991}>
+            <Row>
+              <Col style={{ marginBottom: "15px" }}>
+                <VideoPic>
+                  <ReactPlayer
+                    style={{ position: "absolute", top: "0", left: "0" }}
+                    light
+                    playing
+                    controls
+                    url="https://www.youtube.com/watch?v=i_O8RSYPaQM"
+                    width="100%"
+                    height="100%"
+                  />
+                </VideoPic>
+                <DetailAbout style={{ marginTop: "10", color: "#0a2980" }}>
                   Sed sit amet ligula eget eros venenatis sodales non vitae
-                  lorem.
+                  lorem. In laoreet nunc in vestibulum posuere. sidjcodsif
+                  oidfjvoos osidcjoi iosjdvoi dj osdivjofdi
                 </DetailAbout>
               </Col>
-              <Col style={{ marginBottom: "10px" }}>
-                <PicBoxMedia src={test} alt="newsMedia" />
+            </Row>
+            <Row style={{ marginBottom: "20px", display: "flex" }}>
+              <Col>
+                <PicImg src={test} alt="videoPic" />
+              </Col>
+              <Col>
                 <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
-                  Sed sit amet ligula eget eros venenatis sodales non vitae
-                  lorem.
+                  Sed sit amet ligula eget eros venenatis
                 </DetailAbout>
               </Col>
-            </Col>
-          </Row>
+            </Row>
+            <Row style={{ marginBottom: "20px", display: "flex" }}>
+              <Col>
+                <PicImg src={test} alt="videoPic" />
+              </Col>
+              <Col>
+                <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+                  Sed sit amet ligula eget eros venenatis
+                </DetailAbout>
+              </Col>
+            </Row>
+            <Row style={{ marginBottom: "20px", display: "flex" }}>
+              <Col>
+                <PicImg src={test} alt="videoPic" />
+              </Col>
+              <Col>
+                <DetailAbout style={{ margin: "0", color: "#0a2980" }}>
+                  Sed sit amet ligula eget eros venenatis
+                </DetailAbout>
+              </Col>
+            </Row>
+          </Mediaquery>
+
           <BottonTabAn onClick={OnClickMedia}>
             <ButtonPush name="MORE" />
           </BottonTabAn>
@@ -343,22 +414,25 @@ const HomePage = () => {
         />
         <Row md={3}>
           <Col xs={12}>
-            <ButtonEconomic>
-              <div onClick={OnClickConfident} style={{ textAlign: "center" }}>
+            <Buttondiv onClick={OnClickConfident}>
+              <ButtonEconomic src={yellowButton} alt="button" />
+              <TextButton>
                 <div>ดรรชนีความเชื่อมั่น</div>
                 <div>หอการค้าไทยจีน</div>
-              </div>
-            </ButtonEconomic>
+              </TextButton>
+            </Buttondiv>
           </Col>
           <Col xs={12}>
-            <ButtonEconomic onClick={OnClickThaiInvest}>
-              การลงทุนในไทย
-            </ButtonEconomic>
+            <Buttondiv onClick={OnClickThaiInvest}>
+              <ButtonEconomic src={yellowButton} alt="button" />
+              <TextButton>การลงทุนในไทย</TextButton>
+            </Buttondiv>
           </Col>
           <Col xs={12}>
-            <ButtonEconomic onClick={OnClickChineseInvest}>
-              การลงทุนในจีน
-            </ButtonEconomic>
+            <Buttondiv onClick={OnClickChineseInvest}>
+              <ButtonEconomic src={yellowButton} alt="button" />
+              <TextButton>การลงทุนในจีน</TextButton>
+            </Buttondiv>
           </Col>
         </Row>
         <Row md={4}>
@@ -429,7 +503,7 @@ const HomePage = () => {
           <Row>
             <Col md={{ span: 5 }}>
               <div style={{ textAlign: "center" }}>
-                <Circle src={man1} alt="broadmem" />
+                <Circle src={pesident} alt="broadmem" />
               </div>
             </Col>
             <Col md={{ span: 6, offset: 1 }}>
@@ -441,18 +515,27 @@ const HomePage = () => {
                 <Head2 style={{ color: "#fff", fontWeight: "bold" }}>
                   ประธานหอการค้าไทย - จีน
                 </Head2>
+                <div
+                  style={{
+                    border: "1px solid #fff",
+                    width: "33%",
+                    margin: "10px 0 30px 0",
+                  }}
+                />
                 <ButtonTabMember>
-                  <div
-                    style={{
-                      border: "1px solid #fff",
-                      width: "33%",
-                      margin: "10px 0 30px 0",
-                    }}
-                  />
-                  <div onClick={OnClickMember}>
-                    <HomeButton name="ทำเนียบสมาชิก" />
+                  <div>
+                    <Picdiv
+                      style={{ width: "272.34px" }}
+                      onClick={OnClickMember}
+                    >
+                      <HomeButton src={BlueButton} alt="button" />
+                      <TextButton>ทำเนียบสมาชิก</TextButton>
+                    </Picdiv>
+                    <Picdiv style={{ width: "272.34px" }}>
+                      <HomeButton src={BlueButton} alt="button" />
+                      <TextButton>สมัครสมาชิก</TextButton>
+                    </Picdiv>
                   </div>
-                  <HomeButton name="สมัครสมาชิก" />
                 </ButtonTabMember>
               </div>
             </Col>
