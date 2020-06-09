@@ -14,12 +14,12 @@ import { useHistory } from "react-router-dom";
 
 const NewsCard = ({ nameTopic }) => {
   const history = useHistory();
-  const OnClickDetailNews = (id) => {
-    history.push({pathname: "/DetailNews",id:id});
+  const OnClickDetailNews = () => {
+    history.push({pathname: "/DetailNews"});
   }
 
   return (
-    <Card onClick={OnClickDetailNews(2)}>
+    <Card onClick={OnClickDetailNews}>
       <PicBox src={test} />
       <Topic>
         <div>{nameTopic}</div>

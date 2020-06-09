@@ -19,18 +19,26 @@ export const TextBox = styled.div`
     height: fit-content;
     width: 100%;
     text-align: left;
-    font-size: 2.08vw;
+    font-size: 25px;
     @media (max-width: 767px) {
-        font-size: 15px;
-        top: 0;
+        font-size: 20px;
+        top: 2.6vw;
     }
-    @media (max-width: 374px) {
-        font-size: 13px;
+    @media (max-width: 660px) {
+        font-size: 20px;
+        top: 2.3vw;
+    }
+    @media (max-width: 570px) {
+        font-size: 20px;
+        top: 2.1vw;
+    }
+    @media (max-width: 480px) {
+        font-size: 18px;
         top: 0;
     }
     color: #a5974c;
     position: absolute;
-    top: 3vw;
+    top: 2.6vw;
     font-weight: bold;
 `
 

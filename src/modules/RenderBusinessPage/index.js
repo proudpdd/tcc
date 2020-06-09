@@ -68,9 +68,9 @@ const RenderBusinessPage = ({ namePage, DetailNews }) => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      {/* <Container>
         <CarouselMain Page="true" />
-      </Container>
+      </Container> */}
       <Container>
         <DetailText state={LANGUAGE_STATE_D.Thai} name="ข่าวที่น่าสนใจ" />
         <Row md={4}>

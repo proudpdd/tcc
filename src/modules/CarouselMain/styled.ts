@@ -4,7 +4,7 @@ import { Carousel } from 'react-bootstrap'
 export const CarouselCustom = styled(Carousel)`
     .carousel-inner {
         width: 100%;
-        height: 30vw;
+        height: auto;
         overflow: hidden;
     }
     .carousel-indicators {
@@ -12,11 +12,11 @@ export const CarouselCustom = styled(Carousel)`
     }
     .carousel-control-prev {
         background-color: black;
-        width: 17vw;
+        width: 15vw;
     }
     .carousel-control-next {
         background-color: black;
-        width: 17vw;
+        width: 15vw;
 
     }
 `

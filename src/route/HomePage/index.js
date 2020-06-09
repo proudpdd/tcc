@@ -312,7 +312,6 @@ const HomePage = () => {
                 <VideoPic>
                   <ReactPlayer
                     style={{ position: "absolute", top: "0", left: "0" }}
-                    light
                     playing
                     controls
                     url="https://www.youtube.com/watch?v=i_O8RSYPaQM"
@@ -355,7 +354,6 @@ const HomePage = () => {
                 <VideoPic>
                   <ReactPlayer
                     style={{ position: "absolute", top: "0", left: "0" }}
-                    light
                     playing
                     controls
                     url="https://www.youtube.com/watch?v=i_O8RSYPaQM"
