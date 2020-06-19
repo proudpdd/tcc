@@ -83,12 +83,15 @@ const HomePage = () => {
     history.push({ pathname: "/ChineseInvest" });
   };
 
-  return (
-    <div>
-      <CarouselMain />
+  const OnClickBusiness = () => {
+    history.push({ pathname: "/business" });
+  };
+
+  const HighlightPart = () => {
+    return (
       <ContainerCustom>
         <MainTopicText state={LANGUAGE_STATE_M.Eng} name="HIGHLIGHT" />
-        <Row>
+        <Row onClick={OnClickActivity}>
           <Col md={{ span: 8 }}>
             <NewsTextContainer>
               <PicBoxEconomic
@@ -163,9 +166,14 @@ const HomePage = () => {
           </Col>
         </Row>
       </ContainerCustom>
+    );
+  };
+
+  const ActivityPart = () => {
+    return (
       <ContainerCustom>
         <SecondTopicText state={LANGUAGE_STATE_S.Thai} name="ข่าวกิจกรรม" />
-        <Row>
+        <Row onClick={OnClickActivity}>
           <Col md={{ span: 8 }}>
             <Row style={{ marginBottom: "20px" }}>
               <Col md={{ span: 4 }}>
@@ -276,6 +284,11 @@ const HomePage = () => {
           <ButtonPush name="MORE" />
         </BottonTabAn>
       </ContainerCustom>
+    );
+  };
+
+  const InformationPart = () => {
+    return (
       <div>
         <Container>
           <SecondTopicText
@@ -302,6 +315,11 @@ const HomePage = () => {
           </ContainerCustom>
         </BackgroundInfo>
       </div>
+    );
+  };
+
+  const MediaPart = () => {
+    return (
       <div>
         <ContainerCustom>
           <MainTopicText state={LANGUAGE_STATE_M.Eng} name="MEDIA" />
@@ -405,6 +423,11 @@ const HomePage = () => {
           </BottonTabAn>
         </ContainerCustom>
       </div>
+    );
+  };
+
+  const BusinessPart = () => {
+    return (
       <ContainerCustom>
         <SecondTopicText
           state={LANGUAGE_STATE_S.Thai}
@@ -433,7 +456,7 @@ const HomePage = () => {
             </Buttondiv>
           </Col>
         </Row>
-        <Row md={4}>
+        <Row md={4} onClick={OnClickBusiness}>
           <Col xs={12}>
             <NewsTextContainer>
               <PicBoxEconomic src={test} alt="newseco" />
@@ -495,6 +518,11 @@ const HomePage = () => {
           <ButtonPush name="MORE" />
         </BottonTabAn>
       </ContainerCustom>
+    );
+  };
+
+  const MemberPart = () => {
+    return (
       <ContainerCustom>
         <SecondTopicText state={LANGUAGE_STATE_S.Thai} name="สมาชิก" />
         <BackgroundMember>
@@ -540,6 +568,11 @@ const HomePage = () => {
           </Row>
         </BackgroundMember>
       </ContainerCustom>
+    );
+  };
+
+  const AboutPart = () => {
+    return (
       <ContainerCustom>
         <SecondTopicText state={LANGUAGE_STATE_S.Thai} name="เกี่ยวกับ" />
         <Row>
@@ -561,6 +594,19 @@ const HomePage = () => {
           </Col>
         </Row>
       </ContainerCustom>
+    );
+  };
+
+  return (
+    <div>
+      <CarouselMain />
+      {HighlightPart()}
+      {ActivityPart()}
+      {InformationPart()}
+      {MediaPart()}
+      {BusinessPart()}
+      {MemberPart()}
+      {AboutPart()}
     </div>
   );
 };

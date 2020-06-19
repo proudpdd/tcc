@@ -19,7 +19,7 @@ const PaginationTab = () => {
           alt="next"
         />
         <NumberBox>
-          <Pagination.Item>{1}</Pagination.Item>
+          <Pagination.Item href="/">{1}</Pagination.Item>
           <Pagination.Item>{2}</Pagination.Item>
           <Pagination.Item>{3}</Pagination.Item>
           <Pagination.Item>{4}</Pagination.Item>

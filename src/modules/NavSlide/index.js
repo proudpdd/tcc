@@ -5,7 +5,7 @@ import { NavCustom, PicBox } from "./styled";
 
 const NavSlide = () => {
   return (
-    <NavCustom collapseOnSelect expand="lg">
+    <NavCustom defaultactivekey="/" collapseOnSelect expand="lg">
       <Navbar.Brand href="/">
           <PicBox src={logo} alt={logo} />
       </Navbar.Brand>

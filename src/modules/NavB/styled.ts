@@ -24,10 +24,3 @@ export const NavCustom = styled(Nav)`
   }
 `;
 
-export const NavLinkCustom = styled(Nav)`
-  .nav-item {
-    &:active {
-      color: red !important;
-    }
-  }
-`;

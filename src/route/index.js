@@ -13,14 +13,11 @@ import HonorMember from "./HonorMember";
 import MemberDirectory from "./MemberDirectory";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
-import SecretaryGeneral from "./SecretaryGeneral";
-import ChiefFinance from "./ChiefFinance";
-import ExeFinance from "./ExeFinance";
-import ExeAudit from "./ExeAudit";
+import MemberLibrary from "./MemberLibrary";
 import NavB from "modules/NavB";
 import Footer from "modules/Footer";
 import ScrollTop from "./ScrollTop";
-import DetailNewsPage from './DetailNewsPage'
+import DetailNewsPage from "./DetailNewsPage";
 
 const Routes = () => {
   return (
@@ -40,11 +37,8 @@ const Routes = () => {
         <Route path="/member" component={MemberDirectory} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
-        <Route path="/secretaryGeneral" component={SecretaryGeneral} />
-        <Route path="/chiefExecutive" component={ExeFinance} />
-        <Route path="/chiefExecutiveDeputy" component={ChiefFinance} />
-        <Route path="/chiefExecutiveAudit" component={ExeAudit} />
-        <Route path="/DetailNews" component={DetailNewsPage} />
+        <Route path="/MemberLibrary/:name" component={MemberLibrary} />
+        <Route path="/DetailNews/:news" component={DetailNewsPage} />
         <Footer />
       </ScrollTop>
     </Router>

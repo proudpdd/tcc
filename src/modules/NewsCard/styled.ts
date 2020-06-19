@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PicBox = styled.img`
   width: 100%;
-  height: 180px;
+  height: auto;
 `;
 
 export const Card = styled.div`

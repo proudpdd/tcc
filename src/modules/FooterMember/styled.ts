@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Box = styled.div`
   text-align: center;
@@ -18,4 +19,13 @@ export const TextBox = styled.div`
   display: flex;
   justify-content: center;
   margin: 20px 0;
+`;
+
+export const LinkCustom = styled(Link)`
+  cursor: pointer;
+  color: #0a2980;
+  :hover {
+    color: #0a2980;
+    text-decoration: initial;
+  }
 `;

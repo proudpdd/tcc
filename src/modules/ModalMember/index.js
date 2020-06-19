@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import MemberDetailCard, { PAGE_STATE } from "modules/MemberDetailCard";
 import {
@@ -52,7 +52,7 @@ const ModalMember = ({
   locationThai,
   locationEng,
 }) => {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   const MyVerticallyCenteredModal = (props) => {
     return (
@@ -77,7 +77,7 @@ const ModalMember = ({
               </WhiteTab>
             </CloseBut>
             <Box2>
-              <div style={{ display: "flex", marginLeft: '30px' }}>
+              <div style={{ display: "flex", marginLeft: "30px" }}>
                 <PicBox src={pic} alt="modalpic" />
                 <div>
                   <div style={{ margin: "20px" }}>
@@ -112,7 +112,7 @@ const ModalMember = ({
             </HeaderMobile>
             <Container>
               <EngText>THE 26TH BOARD OF DIRECTORS</EngText>
-              <div style={{ display: "flex", marginLeft: '15px' }}>
+              <div style={{ display: "flex", marginLeft: "15px" }}>
                 <ProfileBox>DIRECTOR</ProfileBox>
                 <Line />
               </div>
@@ -140,7 +140,7 @@ const ModalMember = ({
 
           <Container>
             <div>
-              <div style={{ display: "flex", marginLeft: '15px' }}>
+              <div style={{ display: "flex", marginLeft: "15px" }}>
                 <ProfileBox>PROFILE</ProfileBox>
                 <Line />
               </div>

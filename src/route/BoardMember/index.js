@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import SecondTopicText from "modules/SecondTopicText";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { LANGUAGE_STATE_S } from "modules/SecondTopicText";
@@ -19,15 +19,17 @@ import axios from "axios";
 
 const BoardMember = () => {
   const [broadMembers, setBroadMembers] = useState([]);
-
-  axios
-    .get(
-      `http://backoffice.thaicc.org/Backoffice/ApiArea/Profile?menu=ทำเนียบคณะกรรมการ`
-    )
-    .then((res) => {
-      const broadMembers = res.data;
-      setBroadMembers(broadMembers);
-    });
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios({
+        method: "GET",
+        url:
+          "http://backoffice.thaicc.org/ApiArea/Profile?menu=ทำเนียบคณะกรรมการ",
+      });
+      setBroadMembers(result.data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -46,8 +48,8 @@ const BoardMember = () => {
           .filter(
             (broadMember) => broadMember.profileposition_en === "President"
           )
-          .map((President) => (
-            <div>
+          .map((President, index) => (
+            <div key={index}>
               <Box>
                 <HeadPicBox src={President.url_img} alt="broadPic" />
               </Box>
@@ -73,8 +75,8 @@ const BoardMember = () => {
               (broadMember) =>
                 broadMember.profileposition_en === "Vice President"
             )
-            .map((vicePresident) => (
-              <Col xs={12}>
+            .map((vicePresident, index) => (
+              <Col key={index} xs={12}>
                 <ModalMember
                   surnameEng={vicePresident.name_en}
                   lastnameEng={vicePresident.lastname_en}
@@ -115,8 +117,8 @@ const BoardMember = () => {
             .filter((broadMember) =>
               broadMember.profileposition_en.includes("Secretary General")
             )
-            .map((SecretaryGeneral) => (
-              <Col xs={12}>
+            .map((SecretaryGeneral, index) => (
+              <Col key={index} xs={12}>
                 <ModalMember
                   surnameEng={SecretaryGeneral.name_en}
                   lastnameEng={SecretaryGeneral.lastname_en}

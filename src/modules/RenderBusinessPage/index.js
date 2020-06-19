@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MainTopicText from "modules/MainTopicText";
 import ThirdTopicText from "modules/ThirdTopicText";
 import test from "modules/images/test.jpg";
@@ -15,13 +15,28 @@ import {
   ButtonCustom,
   ButtonDate,
   Detail,
+  Picrow,
+  Picinrow,
 } from "./styled";
 import DetailText from "modules/DetailText";
 import NewsCard from "modules/NewsCard";
 import { LANGUAGE_STATE_M } from "modules/MainTopicText";
 import CarouselMain from "modules/CarouselMain";
+import axios from "axios";
 
 const RenderBusinessPage = ({ namePage, DetailNews }) => {
+  const [activity, setactivity] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios({
+        method: "GET",
+        "Content-type": "application/json",
+        url: "http://backoffice.thaicc.org/ApiArea/Activitynews",
+      });
+      setactivity(result.data);
+    };
+    fetchData();
+  }, []);
   return (
     <div style={{ marginBottom: "50px" }}>
       <Container>
@@ -68,9 +83,14 @@ const RenderBusinessPage = ({ namePage, DetailNews }) => {
           </Col>
         </Row>
       </Container>
-      {/* <Container>
+      <Container style={{ marginBottom: "20px" }}>
         <CarouselMain Page="true" />
-      </Container> */}
+        <Picrow>
+          <Picinrow src={test} alt="fisrtSlide" />
+          <Picinrow src={test} alt="secondSlide" />
+          <Picinrow src={test} alt="thirdSlide" />
+        </Picrow>
+      </Container>
       <Container>
         <DetailText state={LANGUAGE_STATE_D.Thai} name="ข่าวที่น่าสนใจ" />
         <Row md={4}>

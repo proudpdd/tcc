@@ -33,40 +33,40 @@ const HeaderRender = ({ numHeader, name, status }) => {
       <div>{renderHeader()}</div>
       <Row md={4}>
         <Col xs={12}>
-          <ModalMember pic={girl1} surname="suvanee" lastname="clyea" />
+          <ModalMember pic={girl1} surnameEng="suvanee" lastnameEng="clyea" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={girl2} surname="marinee" lastname="yotiieosldjvpd" />
+          <ModalMember pic={girl2} surnameEng="marinee" lastnameEng="yotiieosldjvpd" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={man1} surname="madaya" lastname="dkfjliidoosnns" />
+          <ModalMember pic={man1} surnameEng="madaya" lastnameEng="dkfjliidoosnns" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={man2} surname="yadama" lastname="dpoppoppopop" />
+          <ModalMember pic={man2} surnameEng="yadama" lastnameEng="dpoppoppopop" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={girl1} surname="suvanee" lastname="clyea" />
+          <ModalMember pic={girl1} surnameEng="suvanee" lastnameEng="clyea" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={girl2} surname="marinee" lastname="yotiieosldjvpd" />
+          <ModalMember pic={girl2} surnameEng="marinee" lastnameEng="yotiieosldjvpd" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={man1} surname="madaya" lastname="dkfjliidoosnns" />
+          <ModalMember pic={man1} surnameEng="madaya" lastnameEng="dkfjliidoosnns" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={man2} surname="yadama" lastname="dpoppoppopop" />
+          <ModalMember pic={man2} surnameEng="yadama" lastnameEng="dpoppoppopop" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={girl1} surname="suvanee" lastname="clyea" />
+          <ModalMember pic={girl1} surnameEngname="suvanee" lastnameEng="clyea" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={girl2} surname="marinee" lastname="yotiieosldjvpd" />
+          <ModalMember pic={girl2} surnameEngame="marinee" lastnameEng="yotiieosldjvpd" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={man1} surname="madaya" lastname="dkfjliidoosnns" />
+          <ModalMember pic={man1} surnameEng="madaya" lastnameEng="dkfjliidoosnns" />
         </Col>
         <Col xs={12}>
-          <ModalMember pic={man2} surname="yadama" lastname="dpoppoppopop" />
+          <ModalMember pic={man2} surnameEng="yadama" lastnameEng="dpoppoppopop" />
         </Col>
       </Row>
       <PaginationTab />

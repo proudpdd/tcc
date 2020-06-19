@@ -1,13 +1,24 @@
 import React from "react";
 import background from "modules/images/background.jpg";
 import head from "modules/images/head.png";
-import { PicBox, HeadBox, Box, TextBox, Circle, PicNews } from "./styled";
+import {
+  PicBox,
+  HeadBox,
+  Box,
+  TextBox,
+  Circle,
+  PicNews,
+  CarouselCustom,
+  RowCustom,
+} from "./styled";
 import logo from "modules/TopicNav/images/logo.svg";
 import DetailText from "modules/DetailText";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Carousel } from "react-bootstrap";
 import MainTopicTextBlue from "modules/MainTopicBlue";
 import test from "modules/images/test.jpg";
 import { LANGUAGE_STATE_D } from "modules/DetailText";
+import NewsCard from "modules/NewsCard";
+import Mediaquery from "react-responsive";
 
 const AboutPage = () => {
   return (
@@ -103,6 +114,90 @@ const AboutPage = () => {
           name="CHAMBER OF COMMERCE NETWORK"
         />
       </Container>
+
+      <Mediaquery minWidth={768}>
+        <Container>
+          <CarouselCustom>
+            <Carousel.Item>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="one" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="two" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="three" />
+                </Col>
+              </RowCustom>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="four" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="five" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="six" />
+                </Col>
+              </RowCustom>
+            </Carousel.Item>
+            <Carousel.Item>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="one" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="two" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="three" />
+                </Col>
+              </RowCustom>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="four" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="five" />
+                </Col>
+                <Col xs={12}>
+                  <NewsCard nameTopic="six" />
+                </Col>
+              </RowCustom>
+            </Carousel.Item>
+          </CarouselCustom>
+        </Container>
+      </Mediaquery>
+
+      <Mediaquery maxWidth={767}>
+        <CarouselCustom>
+          <Carousel.Item>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="one" />
+                </Col>
+              </RowCustom>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="two" />
+                </Col>
+              </RowCustom>
+            </Carousel.Item>
+            <Carousel.Item>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="three" />
+                </Col>
+              </RowCustom>
+              <RowCustom md={3}>
+                <Col xs={12}>
+                  <NewsCard nameTopic="four" />
+                </Col>
+              </RowCustom>
+            </Carousel.Item>
+        </CarouselCustom>
+      </Mediaquery>
     </div>
   );
 };

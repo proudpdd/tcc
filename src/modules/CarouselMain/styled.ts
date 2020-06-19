@@ -12,11 +12,11 @@ export const CarouselCustom = styled(Carousel)`
     }
     .carousel-control-prev {
         background-color: black;
-        width: 15vw;
+        width: 13vw;
     }
     .carousel-control-next {
         background-color: black;
-        width: 15vw;
+        width: 13vw;
 
     }
 `

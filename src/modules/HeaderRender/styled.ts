@@ -18,4 +18,5 @@ export const DetailText = styled.div`
     color: #0a2980;
     font-family: cintel;
     margin: 5px 0 0 10px;
+    letter-spacing: 3px;
 `

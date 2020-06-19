@@ -8,30 +8,34 @@ import {
   BlackLine,
   UnderLineBox,
 } from "./styled";
-import test from "modules/images/test.jpg";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import ReactDOM from "react-dom";
 
+// const discribeTry = (discribe) => {
+//   return { __html: { discribe } };
+// };
 
-const NewsCard = ({ nameTopic }) => {
+const NewsCard = ({ nameTopic, discribe, pic, link }) => {
   const history = useHistory();
   const OnClickDetailNews = () => {
-    history.push({pathname: "/DetailNews"});
-  }
+    history.push({ pathname: "/DetailNews" });
+  };
 
   return (
-    <Card onClick={OnClickDetailNews}>
-      <PicBox src={test} />
-      <Topic>
-        <div>{nameTopic}</div>
-        <UnderLineBox>
-          <RedLine />
-          <BlackLine />
-        </UnderLineBox>
-      </Topic>
-      <BodyBox>
-        Stores that fail to enforce disease control
-      </BodyBox>
-    </Card>
+    <Link to={`/DetailNews/${link}`}>
+      <Card onClick={OnClickDetailNews}>
+        <PicBox src={pic} />
+        <Topic>
+          <div>{nameTopic}</div>
+          <UnderLineBox>
+            <RedLine />
+            <BlackLine />
+          </UnderLineBox>
+        </Topic>
+        {/* {discribeTry} */}
+        <BodyBox>discribe</BodyBox>
+      </Card>
+    </Link>
   );
 };
 

@@ -43,3 +43,16 @@ export const Detail = styled.div`
   font-family: promptLight;
   margin-bottom: 25px;
 `;
+
+export const Picrow = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+`
+
+export const Picinrow = styled.img`
+  width: 70px;
+  height: auto;
+  margin-right: 5px;
+`

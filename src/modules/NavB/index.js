@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { NavbarCustom, NavCustom, NavLinkCustom } from "./styled";
+import { NavbarCustom, NavCustom } from "./styled";
 import TopicNav from "../TopicNav";
 import MediaQuery from "react-responsive";
 import NavSlide from "modules/NavSlide";
@@ -14,7 +14,7 @@ const NavB = () => {
 
         <MediaQuery minDeviceWidth={992}>
           <TopicNav />
-          <NavbarCustom defaultActiveKey="/" expand="lg">
+          <NavbarCustom defaultactivekey="/" expand="lg">
             <Navbar.Collapse
               id="basic-navbar-nav"
               className="justify-content-center"

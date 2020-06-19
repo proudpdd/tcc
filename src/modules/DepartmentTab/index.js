@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonMember from "modules/ButtonMember";
 import { CloseBut } from "modules/ModalMember/styled";
 import { ModalCustom2 } from "./styled";
 
 const DepartmentTab = () => {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   const MyVerticallyCenteredModal = (props) => {
     return (

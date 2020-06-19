@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import MainTopicText from "modules/MainTopicText";
 import { LANGUAGE_STATE_M } from "modules/MainTopicText";
@@ -9,15 +9,17 @@ import axios from "axios";
 const MemberDirectory = () => {
   const [members, setMembers] = useState([]);
 
-  axios
-    .get(
-      `http://backoffice.thaicc.org/Backoffice/ApiArea/Profile?menu=ทำเนียบคณะกรรมการ`
-    )
-    .then((res) => {
-      const members = res.data;
-      setMembers(members);
-    });
-
+  useEffect(() => {
+    const FetchProfile = async () => {
+      const result = await axios({
+        method: "GET",
+        url:
+          "http://backoffice.thaicc.org/ApiArea/Profile?menu=ทำเนียบคณะกรรมการ",
+      });
+      setMembers(result.data);
+    };
+    FetchProfile();
+  }, []);
   return (
     <Container>
       <MainTopicText state={LANGUAGE_STATE_M.Thai} name="ทำเนียบสมาชิก" />

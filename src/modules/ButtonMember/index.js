@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-const ButtonMember = ({name}) => {
+const ButtonMember = ({ name }) => {
   return (
     <div>
       <style type="text/css">
@@ -27,4 +27,4 @@ const ButtonMember = ({name}) => {
   );
 };
 
-export default ButtonMember
+export default ButtonMember;

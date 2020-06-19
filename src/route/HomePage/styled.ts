@@ -129,6 +129,7 @@ export const TextButton = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 `;
 
 export const Picdiv = styled.div`
@@ -162,3 +163,8 @@ export const PicImg = styled.img`
     height: 24vw;
   }
 `;
+
+export const FirstNewCard = styled.div`
+  background-color: #b9ab60;
+  color: #fff;
+`

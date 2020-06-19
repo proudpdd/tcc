@@ -1,20 +1,20 @@
 import React from "react";
-import { Box, TextBox, TopicText } from "./styled";
+import { Box, TextBox, TopicText, LinkCustom } from "./styled";
 import ButtonPush from "modules/ButtonPush";
 import PositionTab from "modules/PositionTab";
 import DepartmentTab from "modules/DepartmentTab";
-import { useHistory } from "react-router-dom";
 
-const FooterMember = () => {
-  const history = useHistory();
-  const OnClickExeAudit = () => {
-    history.push({ pathname: "/chiefExecutiveAudit" });
-  };
-
+const FooterMember = ({ name }) => {
   return (
     <Box>
-      <div style={{cursor: 'pointer'}} onClick={OnClickExeAudit}>Senior Executive Directors</div>
-      <div style={{cursor: 'pointer'}}>Directors</div>
+      <div>
+        <LinkCustom to={`/MemberLibrary/Senior Executive Directors`}>
+          Senior Executive Directors
+        </LinkCustom>
+      </div>
+      <div>
+        <LinkCustom to={`/MemberLibrary/Directors`}>Directors</LinkCustom>
+      </div>
       <TextBox>
         <TopicText>ค้นหาสมาชิก</TopicText>
       </TextBox>
